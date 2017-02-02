@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> TrendingCloud </title>
+<style>
+
+body {
+	margin: 0;
+	background-color:lightgrey;
+     }
+
+img {
+	width:570px;
+	height:570px;
+}
+
+#headBar {
+	margin:auto;
+	background-color:black;
+	padding:1px;
+	height:60px;
+	font-size:140%;
+	color:white;
+}
+
+#options {
+	background-color:lightgrey;
+	//z-index:10;
+	//position:fixed;
+	padding:10px;
+	width:30%;
+	float:left;
+}
+
+#content {
+	//padding:10px;
+	//background-color:black;
+	width:60%;
+	float:right;
+}
+
+.keyWords {
+    width: 230px;
+}
+
+</style>
+</head>
+<body>
+
+
+<div id="headBar">
+<h3> TrendingCloud </h3>
+</div>
+
+<div id = "options">
+<h3> Choose your search filters </h3>
+
+<form id="filterForm">
+
+  <input type="radio" id="b1" name="location" value="US" checked> United States<br>
+  <input type="radio" id="b2" name="location" value="Canada"> Canada<br>
+  <input type="radio" id="b3" name="location" value="UK"> United Kingdom<br>
+  <input type="radio" id="b4" name="location" value="germany"> Germany<br>
+  <input type="radio" id="b5" name="location" value="mexico"> Mexico<br><br>
+
+  <input id="Generate" type="button" value="Generate" onclick="loadMap(id);" />
+</form>
+
+<script>
+function loadMap(val)
+{
+   if (document.getElementById("b1").checked)
+   {
+	document.getElementById('wordCloudIMAGE').src='one.png';
+	//document.getElementById('wordCloudIMAGE').src='usWordMap.png';
+   }
+   else if (document.getElementById("b2").checked)
+   {
+	document.getElementById('wordCloudIMAGE').src='two.png';
+	//document.getElementById('wordCloudIMAGE').src='canadaWordMap.png';
+   }
+   else if (document.getElementById("b3").checked)
+   {
+	document.getElementById('wordCloudIMAGE').src='three.png';
+	//document.getElementById('wordCloudIMAGE').src='ukWordMap.png';
+   }
+   else if (document.getElementById("b4").checked)
+   {
+	document.getElementById('wordCloudIMAGE').src='four.png';
+	//document.getElementById('wordCloudIMAGE').src='germanyWordMap.png';
+   }
+   else if (document.getElementById("b5").checked)
+   {
+	document.getElementById('wordCloudIMAGE').src='five.png';
+	//document.getElementById('wordCloudIMAGE').src='mexicoWordMap.png';
+   }
+
+var yourImg = document.getElementById('wordCloudIMAGE');
+if(yourImg && yourImg.style) {
+    yourImg.style.height = '570px';
+    yourImg.style.width = '570px';
+}
+}
+</script>
+</div>
+
+
+<div id = "content">
+<img id="wordCloudIMAGE" src="wordCloudImage.png" width=70%>
+</div>
+
+</body>
+</html>
