@@ -1,0 +1,252 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E211DE481A96BD3B002915E1 /* jokeList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E211DE461A96BD3B002915E1 /* jokeList.cpp */; };
+		E2552E5D1A8BE9380003CF24 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2552E5C1A8BE9380003CF24 /* main.cpp */; };
+		E2552E651A8BF89A0003CF24 /* item.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2552E631A8BF89A0003CF24 /* item.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E2552E571A8BE9380003CF24 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		E211DE461A96BD3B002915E1 /* jokeList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = jokeList.cpp; sourceTree = "<group>"; };
+		E211DE471A96BD3B002915E1 /* jokeList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jokeList.h; sourceTree = "<group>"; };
+		E2552E591A8BE9380003CF24 /* RealSuperMarket */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RealSuperMarket; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2552E5C1A8BE9380003CF24 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		E2552E631A8BF89A0003CF24 /* item.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = item.cpp; sourceTree = "<group>"; };
+		E2552E661A8D85B10003CF24 /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E2552E561A8BE9380003CF24 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E2552E501A8BE9380003CF24 = {
+			isa = PBXGroup;
+			children = (
+				E2552E5B1A8BE9380003CF24 /* RealSuperMarket */,
+				E2552E5A1A8BE9380003CF24 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E2552E5A1A8BE9380003CF24 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E2552E591A8BE9380003CF24 /* RealSuperMarket */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E2552E5B1A8BE9380003CF24 /* RealSuperMarket */ = {
+			isa = PBXGroup;
+			children = (
+				E2552E661A8D85B10003CF24 /* Item.h */,
+				E211DE471A96BD3B002915E1 /* jokeList.h */,
+				E211DE461A96BD3B002915E1 /* jokeList.cpp */,
+				E2552E5C1A8BE9380003CF24 /* main.cpp */,
+				E2552E631A8BF89A0003CF24 /* item.cpp */,
+			);
+			path = RealSuperMarket;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E2552E581A8BE9380003CF24 /* RealSuperMarket */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2552E601A8BE9380003CF24 /* Build configuration list for PBXNativeTarget "RealSuperMarket" */;
+			buildPhases = (
+				E2552E551A8BE9380003CF24 /* Sources */,
+				E2552E561A8BE9380003CF24 /* Frameworks */,
+				E2552E571A8BE9380003CF24 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RealSuperMarket;
+			productName = RealSuperMarket;
+			productReference = E2552E591A8BE9380003CF24 /* RealSuperMarket */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E2552E511A8BE9380003CF24 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = tomillerable;
+				TargetAttributes = {
+					E2552E581A8BE9380003CF24 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+				};
+			};
+			buildConfigurationList = E2552E541A8BE9380003CF24 /* Build configuration list for PBXProject "RealSuperMarket" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E2552E501A8BE9380003CF24;
+			productRefGroup = E2552E5A1A8BE9380003CF24 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E2552E581A8BE9380003CF24 /* RealSuperMarket */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E2552E551A8BE9380003CF24 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2552E651A8BF89A0003CF24 /* item.cpp in Sources */,
+				E211DE481A96BD3B002915E1 /* jokeList.cpp in Sources */,
+				E2552E5D1A8BE9380003CF24 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		E2552E5E1A8BE9380003CF24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		E2552E5F1A8BE9380003CF24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		E2552E611A8BE9380003CF24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E2552E621A8BE9380003CF24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E2552E541A8BE9380003CF24 /* Build configuration list for PBXProject "RealSuperMarket" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2552E5E1A8BE9380003CF24 /* Debug */,
+				E2552E5F1A8BE9380003CF24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E2552E601A8BE9380003CF24 /* Build configuration list for PBXNativeTarget "RealSuperMarket" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2552E611A8BE9380003CF24 /* Debug */,
+				E2552E621A8BE9380003CF24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E2552E511A8BE9380003CF24 /* Project object */;
+}
