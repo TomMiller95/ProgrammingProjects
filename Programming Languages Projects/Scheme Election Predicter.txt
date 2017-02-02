@@ -1,0 +1,106 @@
+;Programming Languages Project
+;Language: Scheme 
+;Enter candidates and their information, and then the program will predict who 
+;  will win the election. Points are awarded for regions, states, commercials, etc. 
+
+; CREATES THE LISTS OF ALL THE REGIONS
+(define NewEngland(cons 'ME (cons 'NH (cons 'VT (cons 'MA (cons 'CT '(RI)))))))
+(define NorthEast(cons 'NY (cons 'PA (cons 'NJ (cons 'DE '(MD))))))
+(define SouthEast(cons 'VA (cons 'NC (cons 'SC (cons 'GA (cons 'FL (cons 'AL (cons 'MS (cons 'TN (cons 'KY (cons 'WV (cons 'AR '(LA)))))))))))))
+(define Lakes(cons 'OH (cons 'MI (cons 'IN (cons 'IL (cons 'WI '(MN)))))))
+(define Central(cons 'IA (cons 'MO (cons 'ND (cons 'SD (cons 'NE (cons 'KS (cons 'OK '(TX)))))))))
+(define West(cons 'MT (cons 'WY (cons 'CO (cons 'NM (cons 'AZ (cons 'UT (cons 'ID '(NV)))))))))
+(define Pacific(cons 'WA (cons 'OR (cons 'CA (cons 'AK '(HI))))))
+
+; RETURNS THE CANDIDATES NAME
+(define (getName list) 
+	(car list))
+
+; RETURNS THE STATE FROM A CANDIDATES LIST
+(define (getState list) 
+	(cadr list))
+
+
+
+; RETURNS NUMBER OF COMMERCIALS 
+(define (commercials list) 
+	(caddr list))
+
+; RETURNS NUMBER OF DAYS THE CANDIDATE HAS SPENT CAMPAIGNING
+(define (campaign list) 
+	(cadddr list))
+
+; RETURNS THE NUMBER OF CAUCUSES WON
+(define (caucus list) 
+	(car (cddddr list)))
+
+
+
+
+; RETURNS THE POINTS FOR COMMERCIALS
+(define (commercialPoints x)
+	(cond ((> 9 x) 0)
+	(else (+ 1 (commercialPoints (- x 10))))))
+
+
+
+; CHECKS IF THE CANDIDATE IS FROM THE SAME STATE (+50 points if true)
+(define (sameState state list)
+	(cond ((eqv? state (getstate list))'50)
+	(else '0)))
+
+;CHECKS IF THE CANDIDATE IS FROM THE SAME REGION AS THE STATE GIVEN (+20 points if true)
+
+
+
+
+; PREDICT - MAIN FUNCTION THAT BEGINS PROGRAM
+(define (predict state list)
+        (cond ((null? list)'())
+	((cons (cons (getname (car list)) (cons (getscore (car list) state) '()))(predict state (cdr list))))))
+
+
+
+
+
+
+; CHECKS IF THE GIVEN STATE AND THE CANDIDATES STATE ARE IN THE SAME REGION
+(define (sameReg givenState candList regionList)
+	(cond ((equal? (checkMatch givenState regionList) #T)
+		(cond ((equal? (checkMatch (getstate candList) regionlist) #T)'20)
+		(else '0)))
+	(else '0)))
+
+
+; CHECKS IF THE GIVEN STATE HAS A MATCH IN A REGION LIST
+(define (checkMatch state list)
+	(cond ((null? list)'#F)
+	(else 
+	(cond ((eqv? state (car list))'#T)
+	(else (checkMatch state (cdr list)))))))
+
+
+; RETURNS 20 POINTS IF THE STATE IS IN THE SAME REGION
+(define (checkRegs givenState candList)
+	(cond ((> (sameReg givenState candList NewEngland) 0) '20)
+	(else 
+	(cond ((> (sameReg givenState candList northeast) 0) '20)
+	(else 
+	(cond ((> (sameReg givenState candList southeast) 0) '20)
+	(else 
+	(cond ((> (sameReg givenState candList lakes) 0) '20)
+	(else
+	(cond ((> (sameReg givenState candList central) 0) '20)
+	(else
+	(cond ((> (sameReg givenState candList west) 0) '20)
+	(else
+	(cond ((> (sameReg givenState candList pacific) 0) '20)
+	(else '0))))))))))))))
+	)
+
+
+
+; GETS SCORE BY CALCULATING ALL POINTS
+(define (getscore list state)
+	(+ (+ (+ (+ (* 5 (caucus list)) (campaign list)) (commercialPoints (commercials list))) (checkRegs state list)) (samestate state list)))
+

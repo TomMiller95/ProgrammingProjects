@@ -1,0 +1,46 @@
+predict(_, [], []).
+
+predict(State, [[Name, HomeState, Comms, Days, Prims]|RemainingCands],[[Name, Scores]|RemainingScores]) :- 
+findScore([HomeState, Comms, Days, Prims],State,Scores),
+predict(State, RemainingCands, RemainingScores).
+
+findScore([HomeState, Comms, Days, Prims],State,Scores) :-
+getRegionPoints(State, HomeState, RegionPoints),
+getSameState(State, HomeState, StatePoints),
+Scores is (Comms // 10) + Days + (Prims * 5) + RegionPoints + StatePoints.
+
+getRegionPoints(State,HomeState,20):-
+member(State, [me,nh,vt,ma,ct,ri]),
+member(HomeState, [me,nh,vt,ma,ct,ri]).
+
+getRegionPoints(State,HomeState,20):-
+member(State, [ny,pa,nj,de,md]),
+member(HomeState, [ny,pa,nj,de,md]).
+
+getRegionPoints(State,HomeState,20):-
+member(State, [va,nc,sc,ga,fl,al,ms,tn,ky,wv,ar,la]),
+member(HomeState, [va,nc,sc,ga,fl,al,ms,tn,ky,wv,ar,la]).
+
+getRegionPoints(State,HomeState,20):-
+member(State, [oh,mi,in,il,wi,mn]),
+member(HomeState, [oh,mi,in,il,wi,mn]).
+
+getRegionPoints(State,HomeState,20):-
+member(State, [ia,mo,nd,sd,ne,ks,ok,tx]),
+member(HomeState, [ia,mo,nd,sd,ne,ks,ok,tx]).
+
+getRegionPoints(State,HomeState,20):-
+member(State, [mt,wy,co,nm,az,ut,id,nv]),
+member(HomeState, [mt,wy,co,nm,az,ut,id,nv]).
+
+getRegionPoints(State,HomeState,20):-
+member(State, [wa,or,ca,ak,hi]),
+member(HomeState, [wa,or,ca,ak,hi]).
+
+getRegionPoints(_,_,0).
+
+getSameState(State, HomeState, 0):-
+State \== HomeState.
+
+getSameState(State, HomeState, 50) :-
+State == HomeState.
